@@ -1,0 +1,12 @@
+<odoo>
+  <record id="view_account_payment_from_invoices_one_payment_inherit" model="ir.ui.view">
+    <field name="name">view.account.payment.from.invoices.one.payment.inherit</field>
+    <field name="model">account.register.payments</field>
+    <field name="inherit_id" ref="account.view_account_payment_from_invoices" />
+    <field name="arch" type="xml">
+      <xpath expr="//field[@name='group_invoices']" position="after">
+        <field name="one_payment"/>
+      </xpath>
+    </field>
+  </record> 
+</odoo>
