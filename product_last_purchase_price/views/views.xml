@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+<record id="last_purchase_price_form_view" model="ir.ui.view">
+  <field name="name">product_template_last_purchase_price_template</field>
+  <field name="model">product.template</field>
+  <field name="inherit_id" ref="product.product_template_form_view"/>
+  <field name="arch" type="xml">
+    <xpath expr="//group[@name='group_standard_price']" position="inside">
+      <field name="last_purchase_price" readonly="1"/>
+    </xpath>
+  </field>
+</record>
+
+</odoo>
