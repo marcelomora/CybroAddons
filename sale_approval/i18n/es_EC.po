@@ -1,0 +1,298 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* sale_approval
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-19 22:38+0000\n"
+"PO-Revision-Date: 2019-11-19 22:38+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sale_approval
+#: model:mail.template,body_html:sale_approval.email_template_sale_approval_mail
+msgid "\n"
+"               <p> Dear Sir / Madam,</p> \n"
+"\n"
+"% if not object.next_discount_amount:   \n"
+"<p>Requesting your approval on the quotation ${object.name}.</p>\n"
+"% endif\n"
+"\n"
+"% if object.next_discount_amount:               \n"
+"<p>Kindly Requesting your approval for providing a discount of ${object.get_discount()}% on the quotation ${object.name}.</p>\n"
+"% endif\n"
+"\n"
+"<p><b>Notes:</b></p>\n"
+"<p>${object.get_reason_notes()}</p>  \n"
+"\n"
+"    <p>Thank you</p>   \n"
+"            "
+msgstr "\n"
+"               <p> Estimado Señor / Señora,</p> \n"
+"\n"
+"% if not object.next_discount_amount:   \n"
+"<p>Solicito su aprobación para la orden de venta ${object.name}.</p>\n"
+"% endif\n"
+"\n"
+"% if object.next_discount_amount:               \n"
+"<p>Respetuosamente solicito su aprobación para dar un descuento de ${object.get_discount()}% en la orden de venta ${object.name}.</p>\n"
+"% endif\n"
+"\n"
+"<p><b>Notas:</b></p>\n"
+"<p>${object.get_reason_notes()}</p>  \n"
+"\n"
+"    <p>Muchas gracias.</p>   \n"
+"            "
+
+#. module: sale_approval
+#: model:ir.model.fields,field_description:sale_approval.field_res_users__sale_order_amount_limit
+msgid "(SO) Amount Limit"
+msgstr "Límite del Importe (OV)"
+
+#. module: sale_approval
+#: model:ir.model.fields,field_description:sale_approval.field_res_users__sale_order_discount_limit
+msgid "(SO) Discount Limit"
+msgstr "Límite del Descuento (OV)"
+
+#. module: sale_approval
+#: model_terms:ir.actions.act_window,help:sale_approval.action_sale_approval
+msgid "All the approval sale orders will be available here."
+msgstr "Todas las órdenes de venta estarán disponibles aquí"
+
+#. module: sale_approval
+#: model:ir.model.fields,field_description:sale_approval.field_sale_approval_reason__approval_for
+msgid "Approve Type"
+msgstr "Tipo de Aprobación"
+
+#. module: sale_approval
+#: model_terms:ir.ui.view,arch_db:sale_approval.view_order_form_extends
+msgid "Ask for approval"
+msgstr "Petición de aprobación"
+
+#. module: sale_approval
+#: model:ir.model.fields,field_description:sale_approval.field_res_users__sale_order_can_approve
+msgid "Can Approve Sale?"
+msgstr "Puede aprobar ventas"
+
+#. module: sale_approval
+#: model_terms:ir.ui.view,arch_db:sale_approval.sale_approval_reason_views
+#: model_terms:ir.ui.view,arch_db:sale_approval.view_order_form_extends
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: sale_approval
+#: selection:sale.order,state:0
+msgid "Cancelled"
+msgstr "Cancelado"
+
+#. module: sale_approval
+#: model_terms:ir.ui.view,arch_db:sale_approval.sale_approval_reason_views
+msgid "Confirm"
+msgstr "Confirmar"
+
+#. module: sale_approval
+#: model_terms:ir.ui.view,arch_db:sale_approval.view_order_form_extends
+msgid "Confirm Sale"
+msgstr "Confirmar Venta"
+
+#. module: sale_approval
+#: model:ir.model.fields,field_description:sale_approval.field_sale_approval_reason__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: sale_approval
+#: model:ir.model.fields,field_description:sale_approval.field_sale_approval_reason__create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: sale_approval
+#: model:ir.model.fields,field_description:sale_approval.field_sale_order__discount_notes
+msgid "Discount Note"
+msgstr "Nota Descuento"
+
+#. module: sale_approval
+#: model:ir.model.fields,field_description:sale_approval.field_sale_approval_reason__display_name
+msgid "Display Name"
+msgstr "Nombre a Mostrar"
+
+#. module: sale_approval
+#: model:ir.model.fields,field_description:sale_approval.field_sale_approval_reason__id
+msgid "ID"
+msgstr "ID"
+
+#. module: sale_approval
+#: model:ir.model.fields,field_description:sale_approval.field_sale_approval_reason____last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: sale_approval
+#: model:ir.model.fields,field_description:sale_approval.field_sale_approval_reason__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: sale_approval
+#: model:ir.model.fields,field_description:sale_approval.field_sale_approval_reason__write_date
+msgid "Last Updated on"
+msgstr "Última actualización en"
+
+#. module: sale_approval
+#: selection:sale.order,state:0
+msgid "Locked"
+msgstr "Bloqueado"
+
+#. module: sale_approval
+#: model:ir.model.fields,field_description:sale_approval.field_sale_order__next_discount_amount
+msgid "Next Discount Amount"
+msgstr "Siguiente Descuento"
+
+#. module: sale_approval
+#: selection:res.users,sale_order_can_approve:0
+msgid "No"
+msgstr "No"
+
+#. module: sale_approval
+#: model:ir.model.fields,field_description:sale_approval.field_sale_approval_reason__notes
+msgid "Notes"
+msgstr "Notas"
+
+#. module: sale_approval
+#: model_terms:ir.ui.view,arch_db:sale_approval.view_order_form_extends
+msgid "Ordered Qty"
+msgstr "Cantidad Ordenada"
+
+#. module: sale_approval
+#: selection:sale.order,state:0
+msgid "Quotation"
+msgstr "Cotización"
+
+#. module: sale_approval
+#: selection:sale.order,state:0
+msgid "Quotation Sent"
+msgstr "Cotización Enviada"
+
+#. module: sale_approval
+#: model:mail.template,subject:sale_approval.email_template_sale_approval_mail
+msgid "RMCL | Sale Approval Request | Quotation ${object.name or '' }"
+msgstr "Pedido | Petición de Aprobación de Venta | Cotización ${object.name or '' }"
+
+#. module: sale_approval
+#: selection:sale.approval.reason,approval_for:0
+msgid "Request For Amount"
+msgstr "Petición por Importe"
+
+#. module: sale_approval
+#: selection:sale.approval.reason,approval_for:0
+msgid "Request For Discount"
+msgstr "Petición para Descuento"
+
+#. module: sale_approval
+#: model:ir.model.fields,field_description:sale_approval.field_sale_approval_reason__requested_discount
+msgid "Requested Discount"
+msgstr "Descuento Solicitado"
+
+#. module: sale_approval
+#: model_terms:ir.ui.view,arch_db:sale_approval.view_users_form_extends
+msgid "Sale Approval"
+msgstr "Aprobación Venta"
+
+#. module: sale_approval
+#: model_terms:ir.ui.view,arch_db:sale_approval.sale_approval_reason_views
+msgid "Sale Approval Reason"
+msgstr "Motivo de Aprobación Venta"
+
+#. module: sale_approval
+#: model:ir.actions.act_window,name:sale_approval.action_sales_approvals
+msgid "Sale Approvals"
+msgstr "Aprobación de Ventas"
+
+#. module: sale_approval
+#: model:ir.model,name:sale_approval.model_sale_order
+msgid "Sale Order"
+msgstr "Orden de Venta"
+
+#. module: sale_approval
+#: model:ir.model.fields,field_description:sale_approval.field_sale_order__approver_id
+msgid "Sale Order Approver"
+msgstr "Aprobador de Órden de Venta"
+
+#. module: sale_approval
+#: model:ir.actions.act_window,name:sale_approval.action_sale_approval
+#: model:ir.ui.menu,name:sale_approval.menu_sale_approval
+msgid "Sales Approval"
+msgstr "Aprobación Venta"
+
+#. module: sale_approval
+#: selection:sale.order,state:0
+msgid "Sales Order"
+msgstr "Órden de Venta"
+
+#. module: sale_approval
+#: model:ir.model,name:sale_approval.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "Línea de la Órden de Venta"
+
+#. module: sale_approval
+#: model_terms:ir.ui.view,arch_db:sale_approval.view_order_form_extends
+msgid "Sales Order Lines"
+msgstr "Líneas de la Venta"
+
+#. module: sale_approval
+#: model:ir.model.fields,field_description:sale_approval.field_sale_order__state
+msgid "Status"
+msgstr "Status"
+
+#. module: sale_approval
+#: model:ir.model,name:sale_approval.model_res_users
+msgid "Users"
+msgstr "Usuarios"
+
+#. module: sale_approval
+#: selection:sale.order,state:0
+msgid "Waiting For Approval"
+msgstr "Esperando Aprobación"
+
+#. module: sale_approval
+#: code:addons/sale_approval/models/sale.py:61
+#, python-format
+msgid "Warning!"
+msgstr "Advertencia!"
+
+#. module: sale_approval
+#: selection:res.users,sale_order_can_approve:0
+msgid "Yes"
+msgstr "Sí"
+
+#. module: sale_approval
+#: code:addons/sale_approval/models/sale.py:27
+#, python-format
+msgid "You can not confirm this sale order. You have asked for Higher value."
+msgstr "No puede confirmar esta orden de venta. Debe solicitar una aprobación para un importe mås elevado"
+
+#. module: sale_approval
+#: code:addons/sale_approval/models/sale.py:25
+#, python-format
+msgid "Your approval limit is lesser then sale order total amount.Click on \"Ask for Approval\" for Higher value."
+msgstr "Su límite de aprobación es menor que el total de órden de venta. Clic en \"Solicitar Aprobación\"."
+
+#. module: sale_approval
+#: code:addons/sale_approval/models/sale.py:62
+#, python-format
+msgid "Your discount limit is lesser than given discount.!"
+msgstr "Su límite de descuento es menor que el ingresado!"
+
+#. module: sale_approval
+#: model_terms:ir.ui.view,arch_db:sale_approval.sale_approval_reason_views
+msgid "or"
+msgstr "o"
+
+#. module: sale_approval
+#: model:ir.model,name:sale_approval.model_sale_approval_reason
+msgid "sale.approval.reason"
+msgstr "Motivo de aprobacion de venta"
+
