@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+    <template id="assets_backend" name="Statement Import Assets" inherit_id="web.assets_backend">
+      <xpath expr="//script[@src='/account/static/src/js/bank_statement.js']" position="replace">
+      </xpath>
+    </template>
+  </data>
+</odoo>
