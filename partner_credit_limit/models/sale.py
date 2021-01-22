@@ -51,6 +51,9 @@ class SaleOrder(models.Model):
     @api.multi
     def action_confirm(self):
         res = super(SaleOrder, self).action_confirm()
+        if self.env.user.has_group('partner_credit_limit.credit_limit_manager'):
+            return res
+
         for order in self:
             order.check_limit()
         return res
