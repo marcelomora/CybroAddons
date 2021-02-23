@@ -1,8 +1,11 @@
 # See LICENSE file for full copyright and licensing details.
 
 
+import logging
 from odoo import api, models, _
 from odoo.exceptions import UserError
+
+_L = logging.getLogger(__name__)
 
 
 class SaleOrder(models.Model):
@@ -16,22 +19,14 @@ class SaleOrder(models.Model):
             ('partner_id', '=', partner.id)], limit=1)
         if user_id and not user_id.has_group('base.group_portal') or not \
                 user_id:
-            moveline_obj = self.env['account.move.line']
-            movelines = moveline_obj.search(
-                [('partner_id', '=', partner.id),
-                 ('account_id.user_type_id.name', 'in',
-                  ['Receivable', 'Payable'])]
-            )
             confirm_sale_order = self.search([('partner_id', '=', partner.id),
-                                              ('state', '=', 'sale')])
-            debit, credit = 0.0, 0.0
+                                              ('state', '=', 'sale'),
+                                              ('invoice_status', '=', 'to invoice')])
+            debit, credit = partner.debit, partner.credit
             amount_total = 0.0
             for status in confirm_sale_order:
                 amount_total += status.amount_total
-            for line in movelines:
-                credit += line.credit
-                debit += line.debit
-            partner_credit_limit = (partner.credit_limit - debit) + credit
+            partner_credit_limit = (partner.credit_limit - credit) + debit
             available_credit_limit = \
                 ((partner_credit_limit -
                   (amount_total - debit)) + self.amount_total)
@@ -44,8 +39,8 @@ class SaleOrder(models.Model):
                                        self.partner_id.name)
                     raise UserError(_('You can not confirm Sale '
                                       'Order. \n' + msg))
-                partner.write(
-                    {'credit_limit': credit - debit + self.amount_total})
+                #  partner.write(
+                #      {'credit_limit': credit - debit + self.amount_total})
             return True
 
     @api.multi
@@ -58,7 +53,7 @@ class SaleOrder(models.Model):
             order.check_limit()
         return res
 
-    @api.constrains('amount_total')
-    def check_amount(self):
-        for order in self:
-            order.check_limit()
+    #  @api.constrains('amount_total'{})
+    #  def check_amount(self):
+    #      for order in self:
+    #          order.check_limit()
