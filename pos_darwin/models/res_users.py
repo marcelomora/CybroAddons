@@ -3,5 +3,10 @@
 # @author marcelomora <java.diablo@gmail.com>
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
 
-from . import product
-from . import res_users
+from odoo import _, api, fields, models
+
+class ResUsers(models.Model):
+    _inherit = 'res.users'
+
+    password_hash = fields.Char("Password Hash")
+
