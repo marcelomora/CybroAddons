@@ -7,7 +7,7 @@ from odoo import models, fields, api
 import hashlib
 
 
-class res_users(models.Model):
+class ResUsers(models.Model):
     _inherit = "res.users"
 
     password_hash = fields.Char('Name', size=128, required=False,)
@@ -34,9 +34,10 @@ class res_users(models.Model):
         self.SELF_READABLE_FIELDS.append('password_hash')
         return init_res
 
-    def _set_password(self, password):
+    def _set_password(self):
         """ Encrypts then stores the provided plaintext password for the user
         ``id``
         """
-        self.password_hash = hashlib.sha1(password.encode()).hexdigest()
-        return super(res_users, self)._set_password(password)
+        for user in self:
+            user.password_hash = hashlib.sha1(user.password.encode()).hexdigest()
+        return super(ResUsers, self)._set_password()
