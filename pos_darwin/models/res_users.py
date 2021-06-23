@@ -12,20 +12,13 @@ class ResUsers(models.Model):
 
     password_hash = fields.Char('Name', size=128, required=False,)
 
-    @api.model
-    def create(self, vals):
-        # for record in self:
-        if not vals.get('email') and not vals.get('partner_id'):
-            vals['email'] = vals.get('login')
-        return super(res_users, self).create(vals)
-
     def __init__(self, pool, cr):
         """ Override of __init__ to add access rights on
         store fields. Access rights are disabled by
         default, but allowed on some specific fields defined in
         self.SELF_{READ/WRITE}ABLE_FIELDS.
         """
-        init_res = super(res_users, self).__init__(pool, cr)
+        init_res = super(ResUsers, self).__init__(pool, cr)
         # duplicate list to avoid modifying the original reference
         self.SELF_WRITEABLE_FIELDS = list(self.SELF_WRITEABLE_FIELDS)
         self.SELF_WRITEABLE_FIELDS.append('password_hash')
