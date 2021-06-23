@@ -14,10 +14,13 @@ class AccountInvoice(models.Model):
         taxes = self.env['account.tax'].search([('code_base', '=', '413')])
         tax = [t.id for t in taxes][0]
         for inv in self:
+            if inv.type not in ('out_invoice', 'out_refund'):
+                continue
             for line in inv.invoice_line_ids:
                 if not line.invoice_line_tax_ids:
                     tx = [(6, 0, (tax,))]
                     line.write({'invoice_line_tax_ids': tx})
 
+            inv._compute_amount()
         return super(AccountInvoice, self).invoice_validate()
 
