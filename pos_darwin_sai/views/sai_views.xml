@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+<record id="pharmacy_active_principle_view_tree" model="ir.ui.view">
+    <field name="model">pharmacy.active.principle</field>
+    <field name="arch" type="xml">
+        <tree string="Active Principle">
+            <field name="name"/>
+        </tree>
+    </field>
+</record>
+
+<record id="pharmacy_active_principle_view_form" model="ir.ui.view">
+    <field name="model">pharmacy.active.principle</field>
+    <field name="arch" type="xml">
+        <form string="Active Principle">
+          <div class="oe_title">
+            <h1>
+              <field name="name"/>
+            </h1>
+          </div>
+        </form>
+    </field>
+</record>
+<record id="pharmacy_symptom_view_tree" model="ir.ui.view">
+    <field name="model">pharmacy.symptom</field>
+    <field name="arch" type="xml">
+        <tree string="Symptom">
+            <field name="name"/>
+        </tree>
+    </field>
+</record>
+
+<record id="pharmacy_symptom_view_form" model="ir.ui.view">
+    <field name="model">pharmacy.symptom</field>
+    <field name="arch" type="xml">
+        <form string="Symptom">
+          <div class="oe_title">
+            <h1>
+              <field name="name"/>
+            </h1>
+          </div>
+        </form>
+    </field>
+</record>
+
+
+<record id="action_pharmacy_active_principle_view_form" model="ir.actions.act_window">
+  <field name="name">Active Ingredient</field>
+  <field name="res_model">pharmacy.active.principle</field>
+  <field name="type">ir.actions.act_window</field>
+  <field name="view_mode">tree,form</field>
+  <field name="view_type">form</field>
+  <!-- <field name="view_id" ref="pharmacy_active_principle_view_tree"/> -->
+  <field name="help" type="html">
+    <p class="o_view_nocontent_smiling_face">
+       Define a new active ingredient
+    </p>
+  </field>
+</record>
+<menuitem id="menu_prescription_settings"
+  name="Prescription Settings"
+  parent="stock.menu_stock_config_settings"
+  sequence="20"
+    />
+<menuitem action="action_pharmacy_active_principle_view_form" id="menu_action_pharmacy_active_principle_form"
+    parent="menu_prescription_settings" sequence="10"/>
+
+<record id="action_pharmacy_symptom_view_form" model="ir.actions.act_window">
+  <field name="name">Symptom</field>
+  <field name="res_model">pharmacy.symptom</field>
+  <field name="type">ir.actions.act_window</field>
+  <field name="view_mode">tree,form</field>
+  <field name="view_type">form</field>
+  <!-- <field name="view_id" ref="pharmacy_active_principle_view_tree"/> -->
+  <field name="help" type="html">
+    <p class="o_view_nocontent_smiling_face">
+       Define a new symptom
+    </p>
+  </field>
+</record>
+
+
+<menuitem action="action_pharmacy_symptom_view_form" id="menu_action_symptom_principle_form"
+    parent="menu_prescription_settings" sequence="20"/>
+
+</odoo>

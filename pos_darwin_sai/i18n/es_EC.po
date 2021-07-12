@@ -1,0 +1,130 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* pos_darwin_sai
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-12 11:29+0000\n"
+"PO-Revision-Date: 2021-07-12 06:31-0500\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es_EC\n"
+"X-Generator: Poedit 2.4.2\n"
+
+#. module: pos_darwin_sai
+#: model:ir.actions.act_window,name:pos_darwin_sai.action_pharmacy_active_principle_view_form
+#: model:ir.ui.menu,name:pos_darwin_sai.menu_action_pharmacy_active_principle_form
+msgid "Active Ingredient"
+msgstr "Principio Activo"
+
+#. module: pos_darwin_sai
+#: model:ir.model.fields,field_description:pos_darwin_sai.field_product_product__active_principle_id
+#: model:ir.model.fields,field_description:pos_darwin_sai.field_product_template__active_principle_id
+#: model_terms:ir.ui.view,arch_db:pos_darwin_sai.pharmacy_active_principle_view_form
+#: model_terms:ir.ui.view,arch_db:pos_darwin_sai.pharmacy_active_principle_view_tree
+msgid "Active Principle"
+msgstr "Principio Activo"
+
+#. module: pos_darwin_sai
+#: model:ir.model.fields,field_description:pos_darwin_sai.field_pharmacy_active_principle__create_uid
+#: model:ir.model.fields,field_description:pos_darwin_sai.field_pharmacy_symptom__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: pos_darwin_sai
+#: model:ir.model.fields,field_description:pos_darwin_sai.field_pharmacy_active_principle__create_date
+#: model:ir.model.fields,field_description:pos_darwin_sai.field_pharmacy_symptom__create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: pos_darwin_sai
+#: model_terms:ir.actions.act_window,help:pos_darwin_sai.action_pharmacy_active_principle_view_form
+msgid "Define a new active ingredient"
+msgstr "Aquí puede crear un nuevo principio activo"
+
+#. module: pos_darwin_sai
+#: model_terms:ir.actions.act_window,help:pos_darwin_sai.action_pharmacy_symptom_view_form
+msgid "Define a new symptom"
+msgstr "Aquí puede crear un nuevo síntoma"
+
+#. module: pos_darwin_sai
+#: model:ir.model.fields,field_description:pos_darwin_sai.field_pharmacy_active_principle__display_name
+#: model:ir.model.fields,field_description:pos_darwin_sai.field_pharmacy_symptom__display_name
+msgid "Display Name"
+msgstr "Nombre a mostrar"
+
+#. module: pos_darwin_sai
+#: model:ir.model.fields,field_description:pos_darwin_sai.field_pharmacy_active_principle__id
+#: model:ir.model.fields,field_description:pos_darwin_sai.field_pharmacy_symptom__id
+msgid "ID"
+msgstr "ID"
+
+#. module: pos_darwin_sai
+#: model:ir.model.fields,field_description:pos_darwin_sai.field_pharmacy_active_principle____last_update
+#: model:ir.model.fields,field_description:pos_darwin_sai.field_pharmacy_symptom____last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: pos_darwin_sai
+#: model:ir.model.fields,field_description:pos_darwin_sai.field_pharmacy_active_principle__write_uid
+#: model:ir.model.fields,field_description:pos_darwin_sai.field_pharmacy_symptom__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: pos_darwin_sai
+#: model:ir.model.fields,field_description:pos_darwin_sai.field_pharmacy_active_principle__write_date
+#: model:ir.model.fields,field_description:pos_darwin_sai.field_pharmacy_symptom__write_date
+msgid "Last Updated on"
+msgstr "Última actualización el"
+
+#. module: pos_darwin_sai
+#: model:ir.model.fields,field_description:pos_darwin_sai.field_pharmacy_active_principle__name
+#: model:ir.model.fields,field_description:pos_darwin_sai.field_pharmacy_symptom__name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: pos_darwin_sai
+#: model:ir.model,name:pos_darwin_sai.model_pharmacy_active_principle
+msgid "Pharmacy Active Principle"
+msgstr "Principio Activo"
+
+#. module: pos_darwin_sai
+#: model:ir.model,name:pos_darwin_sai.model_pharmacy_symptom
+msgid "Pharmacy Symptom"
+msgstr "Síntoma"
+
+#. module: pos_darwin_sai
+#: model:ir.ui.menu,name:pos_darwin_sai.menu_prescription_settings
+msgid "Prescription Settings"
+msgstr "Configuración Prescripción"
+
+#. module: pos_darwin_sai
+#: model:ir.model,name:pos_darwin_sai.model_product_template
+msgid "Product Template"
+msgstr "Plantilla de producto"
+
+#. module: pos_darwin_sai
+#: model:ir.actions.act_window,name:pos_darwin_sai.action_pharmacy_symptom_view_form
+#: model:ir.model.fields,field_description:pos_darwin_sai.field_product_product__symptom_ids
+#: model:ir.model.fields,field_description:pos_darwin_sai.field_product_template__symptom_ids
+#: model:ir.ui.menu,name:pos_darwin_sai.menu_action_symptom_principle_form
+#: model_terms:ir.ui.view,arch_db:pos_darwin_sai.pharmacy_symptom_view_form
+#: model_terms:ir.ui.view,arch_db:pos_darwin_sai.pharmacy_symptom_view_tree
+msgid "Symptom"
+msgstr "Síntoma"
+
+#. module: pos_darwin_sai
+#: model_terms:ir.ui.view,arch_db:pos_darwin_sai.product_template_view_inh_sai_form
+msgid "Symptoms"
+msgstr "Síntomas"
+
+#. module: pos_darwin_sai
+#: model_terms:ir.ui.view,arch_db:pos_darwin_sai.product_template_view_inh_sai_form
+msgid "Vademecum"
+msgstr "Vademecum"
